@@ -5,9 +5,9 @@ module Api
 
       # GET /tags
       def index
-        @tags = Tag.includes(:prayers)
+        @tags = Tag.all
 
-        render json: @tags, include: ['prayers']
+        render json: @tags
       end
 
       # GET /tags/1
