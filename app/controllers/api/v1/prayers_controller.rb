@@ -48,7 +48,7 @@ module Api
 
         # Only allow a trusted parameter "white list" through.
         def prayer_params
-          params.require(:prayer).permit(:title, :request, :email, :private)
+          params.require(:prayer).permit(:title, :request, :email, :private, tag_ids: [])
         end
     end
   end
