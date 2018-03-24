@@ -1,19 +1,16 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 const PrayerList = ({prayers}) => {
     return (
         <ul>
             {prayers.map(prayer =>
                 <li key={prayer.id}>
-                    {prayer.name}
+                    <strong>{prayer.title}</strong>
+                    <p>{prayer.request}</p>
                 </li>
             )}
         </ul>
     )
-}
-
-PrayerList.propTypes = {
-    prayers: PropTypes.array.isRequired
 }
 
 export default PrayerList

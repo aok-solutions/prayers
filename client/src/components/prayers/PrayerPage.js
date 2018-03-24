@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import * as actions from '../../actions/prayerActions'
 import PrayerList from './PrayerList'
 
 class PrayerPage extends React.Component {
@@ -14,10 +13,6 @@ class PrayerPage extends React.Component {
             </div>
         )
     }
-}
-
-PrayerPage.propTypes = {
-    prayers: PropTypes.array.isRequired
 }
 
 function mapStateToProps(state, ownProps) {
