@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux'
-import prayers from './prayerReducer'
+import { combineReducers } from 'redux';
+import prayers from './prayerReducer';
 
 const rootReducer = combineReducers({
-    prayers
-})
+	prayers
+});
 
-export default rootReducer
+export default rootReducer;
