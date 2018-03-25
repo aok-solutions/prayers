@@ -1,7 +1,15 @@
 import * as types from './actionTypes'
 import prayersApi from '../api/prayersApi'
 
-export default function loadPrayers() {
+export function loadPrayersSuccess(prayers) {
+    return { type: types.LOAD_PRAYERS_SUCCESS, prayers }
+}
+
+export function createPrayerSuccess(prayer) {
+    return { type: types.CREATE_PRAYER_SUCCESS, prayer }
+}
+
+export function loadPrayers() {
     return function (dispatch) {
         return prayersApi.getAllPrayers().then(prayers => {
             dispatch(loadPrayersSuccess(prayers))
@@ -11,6 +19,13 @@ export default function loadPrayers() {
     }
 }
 
-export function loadPrayersSuccess(prayers) {
-    return { type: types.LOAD_PRAYERS_SUCCESS, prayers }
+export function createPrayer(prayer) {
+    return function (dispatch) {
+        return prayersApi.createPrayer(prayer).then(prayerResponse => {
+            dispatch(createPrayerSuccess(prayerResponse))
+            return prayerResponse
+        }).catch(error => {
+            throw(error)
+        })
+    }
 }

@@ -1,4 +1,3 @@
 export default {
-    prayers: [],
-    tags: []
+    prayers: []
 }

@@ -20,7 +20,7 @@ module Api
         @prayer = Prayer.new(prayer_params)
 
         if @prayer.save
-          render json: @prayer, status: :created, location: @prayer
+          render json: @prayer, status: :created
         else
           render json: @prayer.errors, status: :unprocessable_entity
         end

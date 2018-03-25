@@ -3,10 +3,11 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css';
+import NewPrayerPage from './components/prayers/NewPrayerPage'
 import PrayerPage from './components/prayers/PrayerPage'
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore'
-import loadPrayers from './actions/prayerActions'
+import { loadPrayers } from './actions/prayerActions'
 
 const store = configureStore()
 store.dispatch(loadPrayers())
@@ -15,7 +16,8 @@ render(
     <Provider store={store}>
         <Router>
             <div>
-                <Route exact path="/" component={PrayerPage} />
+                <Route exact path="/" component={NewPrayerPage}/>
+                <Route path="/prayers" component={PrayerPage}/>
             </div>
         </Router>
     </Provider>,
