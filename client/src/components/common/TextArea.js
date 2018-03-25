@@ -1,4 +1,5 @@
 import React from 'react';
+import './common.css';
 
 const TextArea = ({name, label, rows, columns, onChange, placeholder, value, error}) => {
 	let wrapperClass = '';
@@ -8,13 +9,12 @@ const TextArea = ({name, label, rows, columns, onChange, placeholder, value, err
 
 	return (
 		<div className={wrapperClass}>
-			<label htmlFor={name}>{label}</label>
-			<div className="field">
+			<div className="uk-margin">
         <textarea
           name={name}
           rows={rows}
           cols={columns}
-          className=""
+          className="uk-textarea"
           placeholder={placeholder}
           value={value}
           onChange={onChange}/>

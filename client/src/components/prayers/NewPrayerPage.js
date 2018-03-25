@@ -34,8 +34,9 @@ class NewPrayerPage extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Need Prayer?</h1>
-				<h3>You're in the right place</h3>
+				<h2><strong>Need Prayer?</strong> You're in the right place</h2>
+				<p><em>Submit a prayer request and have People Church pastors and leaders interceding on your behalf</em></p>
+				<br/>
 				<PrayerForm
 					prayer={this.state.prayer}
 					onSave={this.savePrayer}

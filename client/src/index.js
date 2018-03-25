@@ -11,18 +11,26 @@ import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 import { loadPrayers } from './actions/prayerActions';
 
+import css from 'uikit/dist/css/uikit.css';
+import Icons from 'uikit/dist/js/uikit-icons';
+import UIkit from 'uikit/dist/js/uikit.js'
+
+UIkit.use(Icons);
+
 const store = configureStore();
 store.dispatch(loadPrayers());
 
 render(
 	<Provider store={store}>
-		<Router history={history}>
-			<div>
-				<Route exact path="/" component={NewPrayerPage}/>
-				<Route path="/thank-you" component={ThankYouPage}/>
-				<Route path="/prayers" component={PrayerPage}/>
-			</div>
-		</Router>
+		<div class="uk-container uk-container-small">
+			<Router history={history}>
+				<div>
+					<Route exact path="/" component={NewPrayerPage}/>
+					<Route path="/thank-you" component={ThankYouPage}/>
+					<Route path="/prayers" component={PrayerPage}/>
+				</div>
+			</Router>
+		</div>
 	</Provider>,
 	document.getElementById('root')
 );

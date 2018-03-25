@@ -10,12 +10,14 @@ class PrayerForm extends React.Component {
 					<TextInput
 						name="title"
 						label="Subject"
+						placeholder="Subject"
 						value={this.props.prayer.title}
 						onChange={this.props.onChange}/>
 
 					<TextArea
 						name="request"
 						label="Request"
+						placeholder="What would you like us to pray for?"
 						rows={5}
 						columns={50}
 						value={this.props.prayer.request}
@@ -24,13 +26,15 @@ class PrayerForm extends React.Component {
 					<TextInput
 						name="email"
 						label="Email"
+						placeholder="Email"
 						value={this.props.prayer.email}
 						onChange={this.props.onChange}/>
 
-					<input
+					<button
 						type="submit"
 						disabled={this.props.saving}
-						onClick={this.props.onSave}/>
+						class="uk-button uk-button-default"
+						onClick={this.props.onSave}>Pray For Me</button>
 				</form>
 			</div>
 		)

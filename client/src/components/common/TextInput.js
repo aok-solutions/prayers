@@ -1,4 +1,5 @@
 import React from 'react';
+import './common.css';
 
 const TextInput = ({name, label, onChange, placeholder, value, error}) => {
 	let wrapperClass = '';
@@ -8,12 +9,11 @@ const TextInput = ({name, label, onChange, placeholder, value, error}) => {
 
 	return (
 		<div className={wrapperClass}>
-			<label htmlFor={name}>{label}</label>
-			<div className="field">
+			<div className="uk-margin">
 				<input
 					type="text"
 					name={name}
-					className=""
+					className="uk-input"
 					placeholder={placeholder}
 					value={value}
 					onChange={onChange}/>
