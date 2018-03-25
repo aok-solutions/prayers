@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css';
-import App from './components/App';
 import PrayerPage from './components/prayers/PrayerPage'
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore'
@@ -16,8 +15,7 @@ render(
     <Provider store={store}>
         <Router>
             <div>
-                <Route exact path="/" component={App} />
-                <Route path="/prayers" component={PrayerPage} />
+                <Route exact path="/" component={PrayerPage} />
             </div>
         </Router>
     </Provider>,
