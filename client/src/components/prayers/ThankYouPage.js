@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import chris from './chris-carmona.png'
 import audrey from './audrey-carmona.png'
 
@@ -14,20 +13,20 @@ class ThankYouPage extends React.Component {
 					<div>
 						<div className="uk-card uk-card-default uk-background-light-grey uk-text-dark-grey">
 							<img src={chris} alt="Chris Carmona" />
-							<Link to="http://www.instagram.com/chriscarmona">Chris Carmona</Link>
+							<a href="http://www.instagram.com/chriscarmona" target="_blank">Chris Carmona</a>
 						</div>
 					</div>
 					<div>
 						<div className="uk-card uk-card-default uk-background-light-grey uk-text-dark-grey">
 							<img src={audrey} alt="Audrey Carmona" />
-							<Link to="http://www.instagram.com/audscarmona">Audrey Carmona</Link>
+							<a href="http://www.instagram.com/audscarmona" target="_blank">Audrey Carmona</a>
 						</div>
 					</div>
 				</div>
 
 				<br/>
 				<div>
-					<Link to="/">Click here</Link> to submit another prayer request
+					<a href="/">Click here</a> to submit another prayer request
 				</div>
 			</div>
 		)
