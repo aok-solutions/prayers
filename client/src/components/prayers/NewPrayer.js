@@ -40,7 +40,10 @@ class NewPrayer extends Component {
 			createdAt: moment.utc().format()
 		});
 
-		history.push('/thank-you');
+		history.push({
+			pathname: '/thanks',
+			state: { prayer }
+		});
 	}
 
 	render() {

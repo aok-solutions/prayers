@@ -9,6 +9,7 @@ import NewPrayer from './components/prayers/NewPrayer';
 import HomePage from './components/HomePage';
 import PrayerPage from './components/prayers/PrayerPage';
 import ThankYouPage from './components/prayers/ThankYouPage';
+import ThankYouSignUp from './components/prayers/ThankYouSignUp';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 import { loadPrayers } from './actions/prayerActions';
@@ -42,10 +43,12 @@ const App = () => (
 			<Router history={history}>
 				<div>
 					<Route exact path="/" component={NewPrayerPage}/>
-					<Route path="/home" component={HomePage}/>
-					<Route path="/pray" component={NewPrayer}/>
 					<Route path="/thank-you" component={ThankYouPage}/>
 					<Route path="/prayers" component={PrayerPage}/>
+
+					<Route path="/home" component={HomePage}/>
+					<Route path="/pray" component={NewPrayer}/>
+					<Route path="/thanks" component={ThankYouSignUp}/>
 				</div>
 			</Router>
 		</div>
