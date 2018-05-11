@@ -5,6 +5,7 @@ import { Router, Route } from 'react-router-dom';
 import history from './history';
 import './index.css';
 import NewPrayerPage from './components/prayers/NewPrayerPage';
+import NewPrayer from './components/prayers/NewPrayer';
 import HomePage from './components/HomePage';
 import PrayerPage from './components/prayers/PrayerPage';
 import ThankYouPage from './components/prayers/ThankYouPage';
@@ -41,7 +42,8 @@ const App = () => (
 			<Router history={history}>
 				<div>
 					<Route exact path="/" component={NewPrayerPage}/>
-					<Route exact path="/home" component={HomePage}/>
+					<Route path="/home" component={HomePage}/>
+					<Route path="/pray" component={NewPrayer}/>
 					<Route path="/thank-you" component={ThankYouPage}/>
 					<Route path="/prayers" component={PrayerPage}/>
 				</div>
