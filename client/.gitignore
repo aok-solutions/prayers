@@ -19,3 +19,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+awsmobilejs
+appsync-info.json
+aws-exports.js

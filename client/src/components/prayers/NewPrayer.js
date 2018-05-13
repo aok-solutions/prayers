@@ -21,7 +21,7 @@ class NewPrayer extends Component {
 		}
 	};
 
-	handleChange(field, { target: { value, type, checked } }) {
+	handleChange = (field, { target: { value, type, checked } }) => {
 		const { prayer } = this.state;
 		prayer[field] = type === 'checkbox' ? checked : value;
 

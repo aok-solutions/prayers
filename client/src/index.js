@@ -23,6 +23,10 @@ import css from 'uikit/dist/css/uikit.css';
 import Icons from 'uikit/dist/js/uikit-icons';
 import UIkit from 'uikit/dist/js/uikit.js'
 
+import config from './aws-exports'
+import Amplify from 'aws-amplify'
+Amplify.configure(config)
+
 UIkit.use(Icons);
 
 const store = configureStore();
